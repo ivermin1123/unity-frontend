@@ -1,0 +1,12 @@
+# https://github.com/ivermin1123/unity-frontend
+
+
+/.github/CODEOWNERS                             @ivermin1123
+/shared/                                        @ivermin1123
+/.eslintrc.json                                 @ivermin1123
+/.jest.config.ts                                @ivermin1123
+/.jest.setup.ts                                @ivermin1123
+/.next.config.js                                @ivermin1123
+/public/                                        @ivermin1123
+/styles/                                        @ivermin1123
+/types/                                         @ivermin1123
