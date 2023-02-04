@@ -1,17 +1,19 @@
 import { Container } from '@nextui-org/react';
 import React from 'react';
+import styled from 'styled-components';
+
+const SignInWrapper = styled.div`
+  background-image: url('/images/signInBg.png');
+  min-height: 100vh;
+  display: flex;
+  background-position: center;
+`;
 
 const SignIn = () => {
   return (
-    <Container
-      style={{
-        backgroundImage: 'url(/images/signInBg.png)',
-        width: '100%',
-        height: '100%',
-      }}
-    >
+    <SignInWrapper>
       <span>Hello !!</span>
-    </Container>
+    </SignInWrapper>
   );
 };
 
