@@ -2,14 +2,12 @@ import { DefaultThemeType } from './types';
 
 const defaultTheme = {
   colors: {
-    primary: '#6C5DD3',
     primaryShade1: '#CFC8FF',
     primaryShade2: '#E7E4FF',
     primaryOpacity1: '#F7F7FD',
     primaryOpacity2: '#F1EFFB',
     primaryOpacity3: '#B6AEE9',
     primaryOpacity4: '#9186DE',
-    secondary: '#0049C6',
     secondaryShade1: '#A0D7E7',
     secondaryShade2: '#3F8CFF',
     secondaryShade3: '#002685',

@@ -14,7 +14,7 @@ const SignInForm = () => {
   const { theme } = useTheme();
 
   return (
-    <Card css={{ mw: '400px' }}>
+    <Card css={{ maxWidth: '512px' }}>
       <Card.Body
         css={{
           padding: theme?.space[16],
@@ -40,13 +40,33 @@ const SignInForm = () => {
           <Spacer y={0.5} />
           <Input.Password
             clearable
+            fullWidth
             required
             label="Password"
             placeholder="Enter your password"
           />
           <Spacer y={1} />
-          <Button size="lg" shadow>
+          <Button
+            size="lg"
+            shadow
+            color="secondary"
+            css={{
+              width: '100%',
+            }}
+          >
             Continue
+          </Button>
+          <Spacer y={1} />
+          <Text>Or continue with</Text>
+          <Spacer y={1} />
+          <Button
+            size="lg"
+            shadow
+            css={{
+              width: '100%',
+            }}
+          >
+            Google
           </Button>
         </Col>
       </Card.Body>

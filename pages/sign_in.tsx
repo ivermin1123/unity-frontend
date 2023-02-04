@@ -20,8 +20,10 @@ const SignIn = () => {
       <Container>
         <Row
           css={{
+            margin: 'auto',
             marginTop: theme?.space['4xl'],
             gap: theme?.space[52],
+            maxWidth: '960px',
           }}
         >
           <Col span={6}>

@@ -4,6 +4,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { lightTheme, darkTheme } from '@/shared/theme/globalTheme';
+import { SSRProvider } from '@react-aria/ssr';
 
 export default function App({
   Component,
@@ -21,7 +22,9 @@ export default function App({
     >
       <NextUIProvider>
         <SessionProvider session={session}>
-          <Component {...pageProps} />
+          <SSRProvider>
+            <Component {...pageProps} />
+          </SSRProvider>
         </SessionProvider>
       </NextUIProvider>
     </NextThemesProvider>
