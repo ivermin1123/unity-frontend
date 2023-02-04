@@ -13,6 +13,7 @@ export default function App({
     <NextThemesProvider
       defaultTheme="light"
       attribute="class"
+      enableSystem={false}
       value={{
         light: lightTheme.className,
         dark: darkTheme.className,

@@ -8,6 +8,7 @@ const lightTheme = createTheme({
     colors: {
       ...(getDefaultTheme('colors') as any),
       background: '#FCFCFC',
+      authText: '#11142D',
     },
   },
 });
@@ -18,7 +19,8 @@ const darkTheme = createTheme({
     ...getDefaultTheme('all'),
     colors: {
       ...(getDefaultTheme('colors') as any),
-      background: '#1F2128',
+      background: '#242731',
+      authText: '#FFFFFF',
     },
   },
 });
