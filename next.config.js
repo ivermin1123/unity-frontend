@@ -18,7 +18,12 @@ const nextConfig = {
         },
       ],
     });
+    return config;
   },
 };
+
+// const withBundleAnalyzer = require('@next/bundle-analyzer')({
+//   enable: false,
+// });
 
 module.exports = nextConfig;
