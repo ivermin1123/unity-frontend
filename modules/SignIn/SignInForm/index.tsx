@@ -56,9 +56,9 @@ const SignInForm = () => {
           >
             Continue
           </Button>
-          <Spacer y={1} />
+          <Spacer y={0.5} />
           <Text>Or continue with</Text>
-          <Spacer y={1} />
+          <Spacer y={0.5} />
           <Button
             size="lg"
             shadow
