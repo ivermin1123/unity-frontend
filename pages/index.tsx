@@ -3,6 +3,7 @@ import { Inter } from '@next/font/google';
 import { useSession } from 'next-auth/react';
 import App from './_app';
 import SignIn from './sign_in';
+import SignUp from './sign_up';
 
 const inter = Inter({ subsets: ['vietnamese'] });
 
@@ -30,7 +31,7 @@ export default function Home() {
       <Head>
         <title>{SIGN_IN_PAGE_TITLE}</title>
       </Head>
-      <SignIn />
+      <SignUp />
     </>
   );
 }
