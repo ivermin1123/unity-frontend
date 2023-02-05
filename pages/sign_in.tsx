@@ -1,19 +1,11 @@
 'use client';
 import { Col, Container, Row } from '@nextui-org/react';
 import React from 'react';
-import styled from 'styled-components';
 import { Image, Text, useTheme } from '@nextui-org/react';
 
 import Switcher from '@/modules/Switcher';
 import SignInForm from '@/modules/SignIn/SignInForm';
 import Head from 'next/head';
-
-const SignInWrapper = styled.div`
-  background-image: url('/images/sign_in_bg.png');
-  min-height: 100vh;
-  display: flex;
-  background-position: center;
-`;
 
 const SIGN_IN_PAGE_TITLE = 'Sign In';
 
@@ -24,7 +16,14 @@ const SignIn = () => {
       <Head>
         <title>{SIGN_IN_PAGE_TITLE}</title>
       </Head>
-      <SignInWrapper>
+      <Row
+        css={{
+          backgroundImage: `url('/images/sign_in_bg.png')`,
+          minHeight: '100vh',
+          display: 'flex',
+          backgroundPosition: 'center',
+        }}
+      >
         <Container>
           <Row
             css={{
@@ -62,7 +61,7 @@ const SignIn = () => {
             </Col>
           </Row>
         </Container>
-      </SignInWrapper>
+      </Row>
     </>
   );
 };

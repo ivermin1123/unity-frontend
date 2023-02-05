@@ -14,18 +14,7 @@ import BurgerLightIcon from '@/public/icons/burger_light.svg';
 import { SideBar } from './styled';
 import { inputAnimation, showAnimation } from './animations';
 import Switcher from '@/modules/Switcher';
-import NewFeeds from './NewFeeds';
-
-const routes = [
-  {
-    path: '/',
-    name: 'Dashboard',
-  },
-  {
-    path: '/users',
-    name: 'Users',
-  },
-];
+import NewFeeds from './NewsFeed';
 
 const VerticalNavigation = () => {
   const [isOpen, setIsOpen] = useState(true);
