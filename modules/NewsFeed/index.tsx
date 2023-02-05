@@ -1,12 +1,26 @@
-import { Container, Text, Row, Card, Spacer, Image, Avatar, Col } from '@nextui-org/react'
 import React from 'react'
+import {
+  Button,
+  Container,
+  Text,
+  Row,
+  Card,
+  Spacer,
+  Image,
+  Avatar,
+  Col,
+} from '@nextui-org/react'
+
+import Tick from '@/public/icons/tick.svg'
+import Live from '@/public/icons/live.svg'
+import WatchingDot from '@/public/icons/dot.svg'
 
 const NewsFeed = () => {
   return (
     <Container
       fluid
       css={{
-        padding: '4rem',
+        p: '4rem',
       }}
     >
       <Row fluid justify='space-between'>
@@ -20,49 +34,225 @@ const NewsFeed = () => {
             <Image
               width="100%"
               height={170}
-              src="https://github.com/nextui-org/nextui/blob/next/apps/docs/public/nextui-banner.jpeg?raw=true"
+              src="/images/card_ex.png"
               alt="Default Image"
               objectFit="cover"
             />
           </Card.Header>
           <Card.Body css={{ padding: '1.5rem' }}>
-            <Text color='white' size={'$lg'} weight={'medium'}>
+            <Text color='white' size='$lg' weight='medium'>
               2020 World Champs Gaming Warzone
             </Text>
-            <Row css={{ marginTop: '1rem', backgroundColor: '#fff', padding: 0 }} align='center'>
+            <Row css={{ mt: '1rem' }} align='center'>
               <Avatar
                 rounded
                 src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
-              <Col css={{ background: 'red' }}>
-                <Text size={'$xs'}>Fi Nguyen</Text>
-
-                <Text>Call of Duty</Text>
+              <Col css={{ ml: '0.5rem' }}>
+                <Row align='center'>
+                  <Text size='$xs' color='white' weight='semibold'>Fi Nguyen</Text>
+                  <Spacer x={0.25} />
+                  <Tick />
+                </Row>
+                <Text size='$xs' weight='semibold'>Call of Duty</Text>
               </Col>
             </Row>
-
           </Card.Body>
+          <Card.Divider />
           <Card.Footer css={{ padding: '1.5rem' }}>
-            <Text>footer</Text>
+            <Row justify='space-between'>
+              <Button
+                color="warning"
+                size="xs"
+                css={{
+                  span: {
+                    gap: '$3'
+                  }
+                }}
+              >
+                <Live />
+                Live
+              </Button>
+
+              <div>
+                <Row align='center'>
+                  <WatchingDot />
+                  <Spacer x={0.5} />
+                  <Text size='$sm'>4.2k watching</Text>
+                </Row>
+              </div>
+            </Row>
           </Card.Footer>
         </Card>
 
-        <Spacer x={0.5} />
-        <Card >
-          <Card.Body>
-            <Text>A basic card</Text>
+        <Spacer x={1} />
+
+        <Card css={{ minHeight: 390 }}>
+          <Card.Header css={{ padding: 0 }}>
+            <Image
+              width="100%"
+              height={170}
+              src="/images/card_ex.png"
+              alt="Default Image"
+              objectFit="cover"
+            />
+          </Card.Header>
+          <Card.Body css={{ padding: '1.5rem' }}>
+            <Text color='white' size='$lg' weight='medium'>
+              2020 World Champs Gaming Warzone
+            </Text>
+            <Row css={{ mt: '1rem' }} align='center'>
+              <Avatar
+                rounded
+                src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+              <Col css={{ ml: '0.5rem' }}>
+                <Row align='center'>
+                  <Text size='$xs' color='white' weight='semibold'>Fi Nguyen</Text>
+                  <Spacer x={0.25} />
+                  <Tick />
+                </Row>
+                <Text size='$xs' weight='semibold'>Call of Duty</Text>
+              </Col>
+            </Row>
           </Card.Body>
+          <Card.Divider />
+          <Card.Footer css={{ padding: '1.5rem' }}>
+            <Row justify='space-between'>
+              <Button
+                color="warning"
+                size="xs"
+                css={{
+                  span: {
+                    gap: '$3'
+                  }
+                }}
+              >
+                <Live />
+                Live
+              </Button>
+
+              <div>
+                <Row align='center'>
+                  <WatchingDot />
+                  <Spacer x={0.5} />
+                  <Text size='$sm'>4.2k watching</Text>
+                </Row>
+              </div>
+            </Row>
+          </Card.Footer>
         </Card>
-        <Spacer x={0.5} />
-        <Card>
-          <Card.Body>
-            <Text>A basic card</Text>
+
+        <Spacer x={1} />
+
+        <Card css={{ minHeight: 390 }}>
+          <Card.Header css={{ padding: 0 }}>
+            <Image
+              width="100%"
+              height={170}
+              src="/images/card_ex.png"
+              alt="Default Image"
+              objectFit="cover"
+            />
+          </Card.Header>
+          <Card.Body css={{ padding: '1.5rem' }}>
+            <Text color='white' size='$lg' weight='medium'>
+              2020 World Champs Gaming Warzone
+            </Text>
+            <Row css={{ mt: '1rem' }} align='center'>
+              <Avatar
+                rounded
+                src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+              <Col css={{ ml: '0.5rem' }}>
+                <Row align='center'>
+                  <Text size='$xs' color='white' weight='semibold'>Fi Nguyen</Text>
+                  <Spacer x={0.25} />
+                  <Tick />
+                </Row>
+                <Text size='$xs' weight='semibold'>Call of Duty</Text>
+              </Col>
+            </Row>
           </Card.Body>
+          <Card.Divider />
+          <Card.Footer css={{ padding: '1.5rem' }}>
+            <Row justify='space-between'>
+              <Button
+                color="warning"
+                size="xs"
+                css={{
+                  span: {
+                    gap: '$3'
+                  }
+                }}
+              >
+                <Live />
+                Live
+              </Button>
+
+              <div>
+                <Row align='center'>
+                  <WatchingDot />
+                  <Spacer x={0.5} />
+                  <Text size='$sm'>4.2k watching</Text>
+                </Row>
+              </div>
+            </Row>
+          </Card.Footer>
         </Card>
-        <Spacer x={0.5} />
-        <Card >
-          <Card.Body>
-            <Text>A basic card</Text>
+
+        <Spacer x={1} />
+
+        <Card css={{ minHeight: 390 }}>
+          <Card.Header css={{ padding: 0 }}>
+            <Image
+              width="100%"
+              height={170}
+              src="/images/card_ex.png"
+              alt="Default Image"
+              objectFit="cover"
+            />
+          </Card.Header>
+          <Card.Body css={{ padding: '1.5rem' }}>
+            <Text color='white' size='$lg' weight='medium'>
+              2020 World Champs Gaming Warzone
+            </Text>
+            <Row css={{ mt: '1rem' }} align='center'>
+              <Avatar
+                rounded
+                src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+              <Col css={{ ml: '0.5rem' }}>
+                <Row align='center'>
+                  <Text size='$xs' color='white' weight='semibold'>Fi Nguyen</Text>
+                  <Spacer x={0.25} />
+                  <Tick />
+                </Row>
+                <Text size='$xs' weight='semibold'>Call of Duty</Text>
+              </Col>
+            </Row>
           </Card.Body>
+          <Card.Divider />
+          <Card.Footer css={{ padding: '1.5rem' }}>
+            <Row justify='space-between'>
+              <Button
+                color="warning"
+                size="xs"
+                css={{
+                  span: {
+                    gap: '$3'
+                  }
+                }}
+              >
+                <Live />
+                Live
+              </Button>
+
+              <div>
+                <Row align='center'>
+                  <WatchingDot />
+                  <Spacer x={0.5} />
+                  <Text size='$sm'>4.2k watching</Text>
+                </Row>
+              </div>
+            </Row>
+          </Card.Footer>
         </Card>
 
       </Row>
