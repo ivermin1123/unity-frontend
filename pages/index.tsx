@@ -1,13 +1,9 @@
 import Head from 'next/head';
-import { Inter } from '@next/font/google';
 import { useSession } from 'next-auth/react';
-import App from './_app';
 import SignIn from './sign_in';
-
-const inter = Inter({ subsets: ['vietnamese'] });
+import Layout from '@/modules/Layout';
 
 const LANDING_PAGE_TITLE = 'Landing Page';
-const SIGN_IN_PAGE_TITLE = 'Sign In';
 
 export default function Home() {
   const { data: session, status } = useSession();
@@ -25,12 +21,5 @@ export default function Home() {
     );
   }
 
-  return (
-    <>
-      <Head>
-        <title>{SIGN_IN_PAGE_TITLE}</title>
-      </Head>
-      <SignIn />
-    </>
-  );
+  return <></>;
 }

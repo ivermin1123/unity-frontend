@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import {
   Button,
@@ -9,6 +10,7 @@ import {
   Text,
   useTheme,
 } from '@nextui-org/react';
+import Link from 'next/link';
 
 const SignInForm = () => {
   const { theme } = useTheme();
@@ -27,7 +29,9 @@ const SignInForm = () => {
           </Text>
           <Row>
             <Text css={{ marginRight: theme?.space[4] }}>New user?</Text>
-            <Text color="$primary">Create an account</Text>
+            <Link href="/sign_up">
+              <Text color="$primary">Create an account</Text>
+            </Link>
           </Row>
           <Spacer y={1.5} />
           <Input
