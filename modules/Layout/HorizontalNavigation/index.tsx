@@ -1,4 +1,3 @@
-import React from 'react';
 import { Row, useTheme } from '@nextui-org/react';
 
 const HorizontalNavigation = () => {
@@ -6,7 +5,7 @@ const HorizontalNavigation = () => {
   return (
     <Row
       css={{
-        boxShadow: `inset 0px -1px 0px ${theme?.colors.border}`,
+        boxShadow: `inset 0px -1px 0px ${theme?.colors.border.value}`,
         minHeight: '112px',
       }}
     ></Row>

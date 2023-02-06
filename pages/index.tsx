@@ -1,12 +1,10 @@
-import Head from 'next/head';
 import { useSession } from 'next-auth/react';
-import SignIn from './sign_in';
-import Layout from '@/modules/Layout';
+import Head from 'next/head';
 
 const LANDING_PAGE_TITLE = 'Landing Page';
 
 export default function Home() {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
 
   if (status === 'authenticated') {
     return (

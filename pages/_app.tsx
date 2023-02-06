@@ -1,10 +1,10 @@
-import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
+import Layout from '@modules/Layout';
 import { NextUIProvider } from '@nextui-org/react';
+import { darkTheme, lightTheme } from '@shared/theme/globalTheme';
 import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import { lightTheme, darkTheme } from '@/shared/theme/globalTheme';
-import Layout from '@/modules/Layout';
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
 
 export default function App({
   Component,

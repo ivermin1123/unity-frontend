@@ -1,13 +1,12 @@
-import React, { useMemo } from 'react';
-import { Button, Col, Row, Text, useTheme } from '@nextui-org/react';
+import { Button, Col, Spacer, Text, useTheme } from '@nextui-org/react';
 import { useRouter } from 'next/router';
+import { useMemo } from 'react';
 
-import NewFeedIcon from '@/public/icons/new_feed.svg';
-import TrendingIcon from '@/public/icons/trending.svg';
-import FollowingIcon from '@/public/icons/following.svg';
-import YourVideosIcon from '@/public/icons/your_videos.svg';
-import ArrowPlus from '@/public/icons/arrow_plus.svg';
-import PlaylistIcon from '@/public/icons/playlist.svg';
+import FollowingIcon from '@public/icons/following.svg';
+import NewFeedIcon from '@public/icons/new_feed.svg';
+import PlaylistIcon from '@public/icons/playlist.svg';
+import TrendingIcon from '@public/icons/trending.svg';
+import YourVideosIcon from '@public/icons/your_videos.svg';
 
 // TODO: remove this when we have api to get menus
 const menus = [
@@ -60,6 +59,7 @@ const NewsFeed = ({ isOpen }: NewFeedsProps) => {
       >
         {isOpen ? 'News Feeds' : 'Feeds'}
       </Text>
+      <Spacer y={0.5} />
       {menus.map(menu => {
         if (!isOpen)
           return (
@@ -68,7 +68,16 @@ const NewsFeed = ({ isOpen }: NewFeedsProps) => {
               light={activeMenu?.path !== menu.path}
               key={menu.name}
               color="secondary"
-              icon={<menu.icon />}
+              icon={
+                <menu.icon
+                  style={{
+                    stroke:
+                      activeMenu?.path === menu.path
+                        ? theme?.colors.white.value
+                        : theme?.colors.text.value,
+                  }}
+                />
+              }
               css={{
                 width: '56px',
                 height: '56px',
@@ -79,19 +88,25 @@ const NewsFeed = ({ isOpen }: NewFeedsProps) => {
           <Button
             key={menu.name}
             css={{
-              width: theme?.space[52],
+              width: theme?.space.full,
               justifyContent: 'start',
               color: activeMenu?.path === menu.path ? '$white' : '$text',
-              background:
-                activeMenu?.path === menu.path
-                  ? theme?.colors.secondary.value
-                  : 'transparent',
+              fontSize: '$sm',
+              height: '$17',
             }}
-            style={{}}
             auto
             light={activeMenu?.path !== menu.path}
             color="secondary"
-            icon={<menu.icon />}
+            icon={
+              <menu.icon
+                style={{
+                  stroke:
+                    activeMenu?.path === menu.path
+                      ? theme?.colors.white.value
+                      : theme?.colors.text.value,
+                }}
+              />
+            }
             onClick={() => router.push(menu.path)}
           >
             {menu.name}

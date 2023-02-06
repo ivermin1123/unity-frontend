@@ -1,11 +1,8 @@
-'use client';
-import { Col, Container, Row } from '@nextui-org/react';
-import React from 'react';
-import { Image, Text, useTheme } from '@nextui-org/react';
-
-import Switcher from '@/modules/Switcher';
-import SignInForm from '@/modules/SignIn/SignInForm';
+import { Col, Container, Image, Row, Text, useTheme } from '@nextui-org/react';
 import Head from 'next/head';
+
+import SignInForm from '@modules/SignIn/SignInForm';
+import Switcher from '@modules/Switcher';
 
 const SIGN_IN_PAGE_TITLE = 'Sign In';
 

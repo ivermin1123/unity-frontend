@@ -1,20 +1,13 @@
-import React, { useState } from 'react';
-import {
-  Button,
-  Col,
-  Container,
-  Image,
-  Row,
-  useTheme,
-} from '@nextui-org/react';
+import { Divider, Image, Row, Spacer, useTheme } from '@nextui-org/react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 
-import BurgerDarkIcon from '@/public/icons/burger_dark.svg';
-import BurgerLightIcon from '@/public/icons/burger_light.svg';
-import { SideBar } from './styled';
-import { inputAnimation, showAnimation } from './animations';
-import Switcher from '@/modules/Switcher';
+import Switcher from '@modules/Switcher';
+import BurgerDarkIcon from '@public/icons/burger_dark.svg';
+import BurgerLightIcon from '@public/icons/burger_light.svg';
 import NewFeeds from './NewsFeed';
+import { showAnimation } from './animations';
+import { SideBar } from './styled';
 
 const VerticalNavigation = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -70,13 +63,14 @@ const VerticalNavigation = () => {
           )}
         </AnimatePresence>
       </Row>
+      <Spacer y={1.5} />
       <NewFeeds isOpen={isOpen} />
-
+      <Spacer y={1.25} />
+      <Divider />
       <Switcher
         style={{
           justifyContent: 'center',
         }}
-        hideIcon={!isOpen}
       />
     </SideBar>
   );

@@ -1,9 +1,9 @@
+import { Col, Row } from '@nextui-org/react';
 import React from 'react';
-import { Col, Row, useTheme } from '@nextui-org/react';
 
-import VerticalNavigation from './VerticalNavigation';
 import { useSession } from 'next-auth/react';
 import HorizontalNavigation from './HorizontalNavigation';
+import VerticalNavigation from './VerticalNavigation';
 
 interface LayoutProps {
   children?: React.ReactNode;

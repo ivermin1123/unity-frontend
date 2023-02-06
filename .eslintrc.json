@@ -4,17 +4,33 @@
     "prettier",
     "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["prettier", "jest", "babel", "immutable", "@typescript-eslint"],
+  "plugins": [
+    "prettier",
+    "jest",
+    "babel",
+    "immutable",
+    "@typescript-eslint"
+  ],
   "env": {
     "jest": true
   },
   "parser": "@typescript-eslint/parser",
   "settings": {
     "import/resolver": {
+      "typescript": {},
       "alias": [
-        ["@packages", "./src/packages"],
-        ["@shared", "./src/shared"],
-        ["@public", "./public"]
+        [
+          "@modules",
+          "./modules"
+        ],
+        [
+          "@shared",
+          "./shared"
+        ],
+        [
+          "@public",
+          "./public"
+        ]
       ]
     }
   },
@@ -24,9 +40,17 @@
     "immutable/no-mutation": 2,
     "immutable/no-this": 2,
     "import/named": 2,
-    "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
+    "import/no-unresolved": [
+      2,
+      {
+        "commonjs": true,
+        "amd": true
+      }
+    ],
     "import/prefer-default-export": 0,
-    "import/first": ["error"],
+    "import/first": [
+      "error"
+    ],
     "react/jsx-curly-brace-presence": 0,
     "react/forbid-prop-types": 0,
     "react/jsx-filename-extension": 0,
@@ -52,9 +76,15 @@
     "no-unused-expressions": "off",
     "babel/no-unused-expressions": "error",
     "@typescript-eslint/no-var-requires": "off",
-    "@typescript-eslint/no-unused-vars": ["error"],
-    "@typescript-eslint/no-use-before-define": ["error"],
+    // "@typescript-eslint/no-unused-vars": [
+    //   "error"
+    // ],
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
     "@typescript-eslint/no-empty-function": "off",
-    "@typescript-eslint/no-shadow": ["error"]
+    "@typescript-eslint/no-shadow": [
+      "error"
+    ]
   }
 }
