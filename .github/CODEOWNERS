@@ -1,6 +1,5 @@
 # https://github.com/ivermin1123/unity-frontend
 
-
 /.github/CODEOWNERS                             @ivermin1123
 /.eslintrc.json                                 @ivermin1123
 /.jest.config.ts                                @ivermin1123
@@ -11,3 +10,7 @@
 /pages/                                         @ivermin1123
 /styles/                                        @ivermin1123
 /types/                                         @ivermin1123
+
+# Phi
+
+/modules/NewsFeed                               @nathan211
