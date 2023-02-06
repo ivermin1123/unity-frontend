@@ -1,7 +1,7 @@
 # https://github.com/ivermin1123/unity-frontend
 
 
-/.github/CODEOWNERS                             @ivermin1123
+/.github/                             @ivermin1123
 /.eslintrc.json                                 @ivermin1123
 /.jest.config.ts                                @ivermin1123
 /.jest.setup.ts                                 @ivermin1123

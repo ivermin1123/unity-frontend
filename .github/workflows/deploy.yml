@@ -1,4 +1,5 @@
 name: Vercel Production Deployment
+on: [push, pull_request]
 jobs:
   vercel: 
     runs-on: ubuntu-latest
