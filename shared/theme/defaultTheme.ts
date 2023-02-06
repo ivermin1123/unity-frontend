@@ -8,6 +8,7 @@ const defaultTheme = {
     primaryOpacity2: '#F1EFFB',
     primaryOpacity3: '#B6AEE9',
     primaryOpacity4: '#9186DE',
+    secondary: '#6C5DD3',
     secondaryShade1: '#A0D7E7',
     secondaryShade2: '#3F8CFF',
     secondaryShade3: '#002685',
@@ -39,8 +40,8 @@ const defaultTheme = {
     iconColor: '#808191',
   },
   fonts: {
-    sans: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;",
-    mono: "Inter, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono'",
+    sans: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;",
+    mono: "'Inter', Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono'",
   },
   fontSizes: {
     xs: '0.75rem' /* 12px */,

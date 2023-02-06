@@ -4,33 +4,24 @@
     "prettier",
     "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": [
-    "prettier",
-    "jest",
-    "babel",
-    "immutable",
-    "@typescript-eslint"
-  ],
+  "plugins": ["prettier", "jest", "babel", "immutable", "@typescript-eslint"],
   "env": {
     "jest": true
   },
   "parser": "@typescript-eslint/parser",
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx", ".spec.tsx"]
+    },
     "import/resolver": {
-      "typescript": {},
+      "typescript": { "alwaysTryTypes": true },
+      "node": {
+        "extensions": [".spec.tsx"]
+      },
       "alias": [
-        [
-          "@modules",
-          "./modules"
-        ],
-        [
-          "@shared",
-          "./shared"
-        ],
-        [
-          "@public",
-          "./public"
-        ]
+        ["@modules", "./modules"],
+        ["@shared", "./shared"],
+        ["@public", "./public"]
       ]
     }
   },
@@ -48,9 +39,7 @@
       }
     ],
     "import/prefer-default-export": 0,
-    "import/first": [
-      "error"
-    ],
+    "import/first": ["error"],
     "react/jsx-curly-brace-presence": 0,
     "react/forbid-prop-types": 0,
     "react/jsx-filename-extension": 0,
@@ -79,12 +68,8 @@
     // "@typescript-eslint/no-unused-vars": [
     //   "error"
     // ],
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
+    "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/no-empty-function": "off",
-    "@typescript-eslint/no-shadow": [
-      "error"
-    ]
+    "@typescript-eslint/no-shadow": ["error"]
   }
 }

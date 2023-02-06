@@ -5,7 +5,8 @@ import { useState } from 'react';
 import Switcher from '@modules/Switcher';
 import BurgerDarkIcon from '@public/icons/burger_dark.svg';
 import BurgerLightIcon from '@public/icons/burger_light.svg';
-import NewFeeds from './NewsFeed';
+import Following from 'pages/following';
+import NewsFeed from './NewsFeed';
 import { showAnimation } from './animations';
 import { SideBar } from './styled';
 
@@ -63,10 +64,15 @@ const VerticalNavigation = () => {
           )}
         </AnimatePresence>
       </Row>
+
+      {/* NewsFeed Section */}
       <Spacer y={1.5} />
-      <NewFeeds isOpen={isOpen} />
-      <Spacer y={1.25} />
+      <NewsFeed isOpen={isOpen} />
+      <Spacer y={1.5} />
       <Divider />
+      <Spacer y={1.5} />
+      <Following />
+
       <Switcher
         style={{
           justifyContent: 'center',
