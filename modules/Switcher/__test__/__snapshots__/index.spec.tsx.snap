@@ -14,6 +14,7 @@ exports[`Switcher should render correctly 1`] = `
       <label
         class="nextui-c-STltJ nextui-c-STltJ-bwQcWP-color-default nextui-c-STltJ-JJjKI-size-md nextui-c-STltJ-bgIFDi-borderWeight-normal"
         data-state="unchecked"
+        data-testid="switcher"
       >
         <input
           class="nextui-c-jjKPqy nextui-c-iFHsrU nextui-c-jjKPqy-gwHlSF-animated-true nextui-switch-input"

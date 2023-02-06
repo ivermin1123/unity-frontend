@@ -1,15 +1,12 @@
-import { act, render } from '@shared/utils/test/test-ultis';
+import { render } from '@shared/utils/test/test-ultis';
 import Switcher from '../index';
 
 describe('Switcher', () => {
-  it('should render correctly', async () => {
-    await act(async () => {
-      await new Promise(resolve => {
-        setTimeout(resolve, 50);
-      });
-    });
-    const { container } = render(<Switcher />);
+  it('should render correctly', () => {
+    const { container, getByTestId } = render(<Switcher />);
 
+    const switcher = getByTestId('switcher');
+    expect(switcher).toBeDefined();
     expect(container).toMatchSnapshot();
   });
 });

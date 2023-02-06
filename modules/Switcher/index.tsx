@@ -33,6 +33,7 @@ const Switcher = ({ style }: SwitcherProps) => {
       }}
     >
       <Switch
+        data-testid="switcher"
         shadow
         checked={isDark}
         onChange={e => setTheme(e.target.checked ? 'dark' : 'light')}
