@@ -1,0 +1,35 @@
+name: Vercel Production Deployment
+jobs:
+  vercel: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # add env file to .env.local
+      # - name: Set Env Vars on Vercel Project
+      #   uses: dkershner6/vercel-set-env-action@v1
+      #   with:
+      #     token: ${{ secrets.VERCEL_TOKEN }}
+      #     projectName: unity-frontend # project name in Vercel
+      #     envVariableKeys: MONGODB_URL,MONGODB_DB
+      #   env:
+      #     MONGODB_URL: ${{ secrets.MONGODB_URL }}
+      #     TARGET_MONGODB_URL: preview,development,production # comma delimited, one of [production, preview, development]
+      #     TYPE_MONGODB_URL: encrypted # one of [plain, encrypted]
+      #     MONGODB_DB: ${{ secrets.MONGODB_DB }}
+      #     TARGET_MONGODB_DB: preview,development,production
+      #     TYPE_MONGODB_DB: encrypted
+          
+      # deploy app to vercel
+      - name: Deploy site to vercel    
+        id: deployment  
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
+          vercel-args: '--prod' #Optional
+          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
+          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required 
+          github-comment: false
+      - name: preview-url
+        run: |
+          echo ${{ steps.deployment.outputs.preview-url }}
