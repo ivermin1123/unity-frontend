@@ -16,4 +16,5 @@ const nextConfig = {
 //   enable: false,
 // });
 
+// eslint-disable-next-line immutable/no-mutation
 module.exports = nextConfig;

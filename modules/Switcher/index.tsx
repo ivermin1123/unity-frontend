@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { useTheme as useNextTheme } from 'next-themes';
 import { CSS, Row, Switch, useTheme } from '@nextui-org/react';
-import { AnimatePresence, motion } from 'framer-motion';
-
-import LightIcon from '@/public/icons/light.svg';
-import DarkIcon from '@/public/icons/dark.svg';
+import { useTheme as useNextTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
+import { BiMoon, BiSun } from 'react-icons/bi';
 
 type SwitcherProps = {
   style?: CSS;
-  hideIcon?: boolean;
 };
 
-const Switcher = ({ style, hideIcon }: SwitcherProps) => {
+const Switcher = ({ style }: SwitcherProps) => {
   const { setTheme } = useNextTheme();
   const { isDark, theme } = useTheme();
 
@@ -36,39 +32,13 @@ const Switcher = ({ style, hideIcon }: SwitcherProps) => {
         ...style,
       }}
     >
-      {!hideIcon && (
-        <>
-          <motion.div
-            initial={{
-              display: !isDark ? 'flex' : 'none',
-            }}
-            animate={{
-              opacity: Number(!isDark),
-              transitionEnd: { display: !isDark ? 'flex' : 'none' },
-            }}
-            exit={{ opacity: 0 }}
-          >
-            <LightIcon />
-          </motion.div>
-
-          <motion.div
-            initial={{
-              display: isDark ? 'flex' : 'none',
-            }}
-            animate={{
-              opacity: Number(isDark),
-              transitionEnd: { display: isDark ? 'flex' : 'none' },
-            }}
-            exit={{ opacity: 0 }}
-          >
-            <DarkIcon />
-          </motion.div>
-        </>
-      )}
-
       <Switch
+        data-testid="switcher"
+        shadow
         checked={isDark}
         onChange={e => setTheme(e.target.checked ? 'dark' : 'light')}
+        iconOff={<BiSun fill="black" color="black" />}
+        iconOn={<BiMoon />}
       />
     </Row>
   );

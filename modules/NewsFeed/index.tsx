@@ -1,19 +1,18 @@
-import React from 'react'
 import {
-  Button,
-  Container,
-  Text,
-  Row,
-  Card,
-  Spacer,
-  Image,
   Avatar,
+  Button,
+  Card,
   Col,
+  Container,
+  Image,
+  Row,
+  Spacer,
+  Text,
 } from '@nextui-org/react'
 
-import Tick from '@/public/icons/tick.svg'
-import Live from '@/public/icons/live.svg'
-import WatchingDot from '@/public/icons/dot.svg'
+import WatchingDot from '@public/icons/dot.svg'
+import Live from '@public/icons/live.svg'
+import Tick from '@public/icons/tick.svg'
 
 const NewsFeed = () => {
   return (
